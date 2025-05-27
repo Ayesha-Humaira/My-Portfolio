@@ -1,0 +1,258 @@
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffe5d9, #fff1e6);
+  color: #333;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* === Dark Theme === */
+body.dark {
+  background: #1e1e2f;
+  color: #eee;
+}
+
+/* === Header === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+body.dark header {
+  background: rgba(30, 30, 47, 0.8);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff8c42;
+}
+
+.theme-toggle {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* === Hero Section === */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 30px;
+  gap: 40px;
+}
+
+.profile-pic img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.intro {
+  max-width: 600px;
+}
+
+.intro h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.intro h2 {
+  font-size: 24px;
+}
+
+.static-text {
+  color: #8b4513;
+  font-weight: bold;
+}
+
+#typing {
+  color: #e76f51;
+  font-weight: bold;
+}
+
+.intro p {
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.social-icons {
+  margin: 20px 0 10px;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 22px;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff8c42;
+}
+
+.cv-button {
+  margin-top: 30px;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #ff8c42;
+  color: white;
+  border: none;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e76f51;
+}
+
+/* === Section Titles === */
+section {
+  padding: 60px 30px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* === Skills Section === */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills-grid span {
+  background: #ffedd5;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+body.dark .skills-grid span {
+  background: #2e2e4e;
+  color: #eee;
+}
+
+.skills-grid span:hover {
+  background: #ffdbb5;
+}
+
+/* === Education Timeline === */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: left;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.timeline li {
+  margin-bottom: 15px;
+  padding-left: 10px;
+  border-left: 3px solid #ff8c42;
+}
+
+/* === Contact Form === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f9f9f9;
+  font-size: 14px;
+}
+
+body.dark footer {
+  background: #2a2a3c;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .intro {
+    text-align: center;
+  }
+}
